@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+
+:root{
+    --yellow:#c77dff;
+    --purplebox: #240046;
+    --purplemid: #5a189a;
+}
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background:var(--yellow);
+    color:#333;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--purplebox);
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--yellow);
+}
+
+body{
+    background:#10002b;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+p{
+    text-transform: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 1rem;
+}
+
+.heading{
+    text-align: center;
+    margin: 0 6rem;
+    margin-bottom: 6rem;
+    font-size: 4rem;
+    padding: 2rem;
+    border-bottom: .1rem solid var(--yellow);
+    color: #fff;
+}
+.heading span{
+    color: var(--yellow);
+}
+
+.btn{
+    padding: .7rem 3rem;
+    background: var(--purplemid);
+    color: #fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+.btn:hover{
+    background: var(--yellow);
+}
+
+.btn i{
+    padding: 0 .5rem;
+    font-size: 1.8rem;
+}
+
+
+
+header{
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:35rem;
+    background:var(--purplebox);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{
+    height:17rem;
+    width:17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.7rem solid var(--yellow);
+}
+
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+
+header .NavBar{
+    width: 100%;
+}
+
+header .NavBar ul{
+    list-style: none;
+    padding: 1rem 3rem;
+}
+
+header .NavBar ul li a{
+    display: block;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background: #3c096c;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .NavBar ul li a:hover{
+    background: var(--yellow);
+}
+
+#menu{
+    position: fixed;
+    top: 2rem ; right: 2rem;
+    background: #240046;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding: 1rem 1.5rem ;
+    z-index: 1000;
+    display: none;
+}
+
+/* ACCEUIL */
+
+.acceuil{
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    padding: 0 15rem;
+}
+
+.acceuil h2{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.acceuil h1{
+    font-size: 5rem;
+    color: #fff;
+}
+
+.acceuil h1 span{
+    color: var(--yellow);
+}
+.acceuil p{
+    text-transform: none;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+}
+
+
+/* A PROPOS */
+
+.apropos .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.apropos .row .info{
+    flex: 1 1 48rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+}
+
+.apropos .row .info h3{
+    font-size: 2rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+.apropos .row .info h3 span{
+    color: #eee;
+    padding: 0 .5rem;
+}
+
+.apropos .row .counter{
+    flex: 1 1 48rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.apropos .row .counter .box{
+    width: 20rem;
+    background: var(--purplebox);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+.apropos .row .counter .box span{
+    font-size: 4rem;
+    color: var(--yellow);
+}
+.apropos .row .counter .box h3{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.apropos .skills{    
+    margin: 0 3rem;
+    margin-top: 5rem;
+}
+
+.apropos .skills .progress{
+    margin: 1.5rem 5rem;
+    padding: 1rem;
+    background:var(--yellow);
+    border-radius: 1rem;
+}
+
+.apropos .skills .progress h3{
+    margin: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.apropos .skills .progress .bar{
+    position: relative;
+    width: 100%;
+    height: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    background: var(--purplebox);
+}
+
+.apropos .skills .progress .bar span{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    background: #eedcff;
+
+}
+
+.apropos .skills .progress:nth-child(1) .bar span{
+    width: 70%;
+}
+.apropos .skills .progress:nth-child(2) .bar span{
+    width: 90%;
+}
+.apropos .skills .progress:nth-child(3) .bar span{
+    width: 85%;
+}
+.apropos .skills .progress:nth-child(4) .bar span{
+    width: 87%;
+}
+.apropos .skills .progress:nth-child(5) .bar span{
+    width: 35%;
+}
+
+
+/* SERVICES */
+
+.Services .counter{
+    flex: 1 1 48rem;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.Services .counter .box{
+    width: 60rem;
+    background: var(--purplebox);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+}
+.Services .counter .box i{
+    font-size: 4rem;
+    padding: 2rem;
+    color: var(--yellow);
+}
+.Services .counter .box h3{
+    font-size: 2rem;
+    color: #fff;
+}
+.Services .counter .box p{
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #fff;
+    text-transform: none;
+}
+
+/* PARCOURS */
+
+.Parcours .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    padding-left: 3rem;
+}
+
+.Parcours .box-container .box{
+    width: 40rem;
+    height: 21rem;
+    margin: 4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+.Parcours .box-container .box i{
+    position: absolute;
+    top: -1.5rem; left: -2.5rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    background: var(--yellow);
+}
+.Parcours .box-container .box .Année{
+    font-size: 1.3rem;
+    background: var(--purplemid);
+    color: #fff;
+    border-radius: 5rem;
+    padding: .5rem 2.5rem;
+}
+.Parcours .box-container .box h3{
+    font-size: 2rem;
+    color: #fff;
+    padding-top: 2.5rem;
+}
+.Parcours .box-container .box h1{
+    font-size: 1.8rem;
+    color: #fff;
+    padding-top: 1.5rem;
+    margin-left: 2rem;
+    font-weight: normal;
+}
+.Parcours .box-container .box h1 .contrat{
+    font-size: 1.5rem;
+    color: #eee;
+    padding-top: 1.5rem;
+    margin-left: 2rem;
+    font-weight: lighter;
+    font-style: italic;
+}
+.Parcours .box-container .box p{
+    font-size: 1.4rem;
+    color: #eee;
+    padding: 1rem 0;
+    margin-left: 2rem;
+}
+
+/* PORTFOLIO */
+
+.Portfolio .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.Portfolio .box-container .box{
+    height: 30rem;
+    width: 39rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.Portfolio .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Portfolio .box-container .box:hover img{
+    transform: scale(1.2);
+}
+
+/* CONTACT */
+
+.Contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.Contact .row .content{
+    flex: 1 1 30rem;
+    padding: 4rem;
+    padding-bottom: 0;
+}
+
+.Contact .row form{
+    flex: 1 1 45rem;
+    padding: 2rem;
+    margin: 2rem;
+    padding-bottom: 4rem;
+}
+
+.Contact .row form .box{
+    padding: 1rem;
+    margin: 1rem 0;
+    background: var(--purplemid);
+    color: #fff;
+    text-transform: none;
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+.Contact .row form .box::placeholder{
+    text-transform: capitalize;
+}
+
+.Contact .row form .message{
+    height: 15rem;
+    resize: none;
+}
+
+.Contact .row .content .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.Contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: #eee;
+    padding: 1rem 0;
+    font-weight: normal;
+    text-transform: none;
+}
+.Contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color: var(--yellow);
+}
+
+.Contact .row .content .info ul{
+    display: flex;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.Contact .row .content .info ul li a {
+    color: var(--yellow);
+    font-size: 3.5rem;
+    padding-right: 3rem;
+}
+
+/* SCROLL TOP BOUTON */
+
+.top{
+    position: fixed;
+    bottom: 5rem; right: 5rem;
+    z-index: 100;
+    display: none;
+}
+.top{
+    font-size: 7rem;
+    color: #eee;
+}
+
+/* media queries*/
+
+@media (max-width:1200px){
+
+    html{
+        font-size:55%;
+    }
+
+    .acceuil{
+        padding: 1rem 4rem;
+    }
+}
+
+@media (max-width:991px){
+
+    header{
+        left: -120%;
+    }
+
+    header.toggle{
+        left: -0;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    body{
+        padding: 0;
+    }
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+
+}
+
+@media (max-width:400px){
+
+    header{
+        width: 100vw;
+    }
+
+    .heading{
+        margin: 0 3rem;
+    }
+
+    .apropos .row .counter .box{
+        width: 100%;
+    }
+    .apropos .row .info{
+        padding: 1rem;
+    }
+
+    .Portfolio .box-container .box {
+        width: 100%;
+    }
+
+    .Contact .row form{
+        margin: 3rem 0;
+    }
+    
+}
